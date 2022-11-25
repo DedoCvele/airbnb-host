@@ -14,7 +14,7 @@ export default function Home({ exploreData, cardsData }: any) {
         <title>Cvetan Airbnb-clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header placeholder={''}/>
       <Banner />
 
       <main className="max-w-7xl mx-auto px-6 sm:p-8">

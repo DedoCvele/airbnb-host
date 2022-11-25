@@ -9,20 +9,21 @@ import Map from "../components/Map.jsx";
 function Search({ searchResults }: any) {
   const router = useRouter();
 
-  const { location, startDate, endDate, numOfGuests } = router.query;
+  const { location, startDate={undefined}, endDate, numOfGuests } = router.query;
 
-  const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
-  const formattedendDate = format(new Date(endDate), "dd MMMM yy");
-  const range = `${formattedStartDate} - ${formattedendDate}`;
+  /* const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
+  const formattedendDate = format(new Date(endDate), "dd MMMM yy"); */
+  /* const range = `${formattedStartDate} - ${formattedendDate}`; */
+/* dodadi ${range} kade pisuva your time  i kade pisuva your time range na 26 linija*/
 
   return (
     <div>
-      <Header placeholder={`${location} | ${range} | ${numOfGuests} guests`} />
+      <Header placeholder={`${location} | your time | ${numOfGuests} guests`} />
 
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
-            300+ Stays from {range} for {numOfGuests} number of Guests
+            300+ Stays from your time range for {numOfGuests} number of Guests
           </p>
           <h1 className="text-xl font-semibold mt-2 mb-6">
             Stays in {location}

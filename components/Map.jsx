@@ -25,18 +25,6 @@ function Map({ searchResults }) {
       {...viewport}
       onMouseMove={(nextViewport) => setViewport(nextViewport)}
     >
-      {searchResults.map((result) => (
-        <div key={result.long}>
-          <Marker
-            longitude={result.long}
-            latitude={result.lat}
-            offsetLeft={-20}
-            offsetTop={-10}
-          >
-            <p className="cursor-pointer text-2xl animate-bounce">📌</p>
-          </Marker>
-        </div>
-      ))}
     </ReactMapGL>
   );
 }
